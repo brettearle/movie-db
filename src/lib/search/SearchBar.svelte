@@ -3,7 +3,7 @@
     import Slider from '@bulatdashiev/svelte-slider';
     
     const fetchMovies = async (title) => {
-        const res = await fetch(`${$API_URL}&s=${title}`);
+        const res = await fetch(`${$API_URL}&s=${title}&plot=full`);
         const data = await res.json(); 
         $moviesSearch = data.Search
     } 
@@ -12,17 +12,20 @@
 </script>
 <header>
     <section id="searchBar">
-        <button on:click={fetchMovies($title)}>Search</button>
-        <input id="searchInput" type="text" bind:value={$title}>
+        <form id="form">
+            <button on:click|preventDefault={fetchMovies($title)}>Search</button>
+            <input id="searchInput" type="input" bind:value={$title}> 
+        </form>
     </section>
     <section id="filterBar">
         <section class="dblSlider">
-             {$yearFilter[0] + 1970}
-             {$yearFilter[1] + 1970}
-            <Slider min="0" max="52" step="1" bind:value={$yearFilter} range order />
+            <div class="labels">
+                <span>{$yearFilter[0] + 1900}</span>
+                <span>YEAR</span>
+                <span>{$yearFilter[1] + 1900}</span> 
+            </div>
+            <Slider min="0" max="150" step="1" bind:value={$yearFilter} range order />
         </section>
-        
-        
         <fieldset on:click={console.log($typeFilter)}>
             <legend>TYPE</legend>
             <label for="any"> 
@@ -41,8 +44,7 @@
                 <input type="radio" name="type" id="episodes" bind:group={$typeFilter} value='episode'>
                 Episodes
             </label>
-         </fieldset>
-        
+         </fieldset>    
     </section>    
 </header>
 
@@ -50,9 +52,10 @@
 <style>
     header {
         display: flex;
+        justify-content: space-between ;
         width: 100%;
         height: 75px;
-        background-color: darkgray;
+        background-color: gray;
         margin: 0;
     }
 
@@ -62,20 +65,24 @@
         
     }
 
-    #searchBar input, #searchBar button {
+    form {
+        display: flex;
+    }
+
+    #form input, #form button {
         box-sizing: border-box;
         padding: 0;
     }
 
-    #searchBar input {
+    #form input {
         border: none;
         width: 80%;
         margin: 25px;
         text-indent: 5%;
-        background-color: darkgray;
+        background-color: gray;
     }
 
-    #searchBar button {
+    #form button {
         width: 20%;
         background: lightblue;
 	    color: inherit;
@@ -93,15 +100,30 @@
 
     #filterBar {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
+        width: 60%;
     }
+
+    #searchInput {
+        background-color: gray;
+    }
+
+    #searchInput:hover, #searchInput:focus{
+        background-color: lightgray;
+    }
+
 
     .dblSlider {
         display: flex;
         flex-direction: column;
+        width: 25%;
     }
 
-   
-
-	
+    .labels {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+    }	
 </style>

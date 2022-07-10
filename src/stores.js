@@ -5,6 +5,6 @@ export let moviesSearch = writable([]);
 export let currentSelectedLI = writable("");
 export let selectedMovie = writable({});
 export let typeFilter = writable("any");
-export let yearFilter = writable([1970, 2022]);
+export let yearFilter = writable([0, 122]);
 
 export const API_URL = writable("http://www.omdbapi.com?apikey=d9463cca");

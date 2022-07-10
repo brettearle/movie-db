@@ -2,7 +2,7 @@
     import {API_URL, moviesSearch, currentSelectedLI,selectedMovie,typeFilter, yearFilter} from "../stores"
     
     const fetchMovie = async (id) => {
-        const res = await fetch(`${$API_URL}&i=${id}`);
+        const res = await fetch(`${$API_URL}&i=${id}&plot=full`);
         const data = await res.json(); 
         $selectedMovie = data  
     } 
@@ -21,11 +21,13 @@
                             on:click="{() => {
                                 $currentSelectedLI = movie.imdbID
                                 fetchMovie(movie.imdbID)
-                                console.log(movie)
                             }}"
                             >
-                            <h2>{movie.Title}</h2>
-                            <p>{movie.Year}</p>
+                            <img class="itemImage" src={movie.Poster} alt={movie.Title}>
+                            <div class="itemDetails">
+                                <h2>{movie.Title}</h2>
+                                <p>{movie.Year}</p> 
+                            </div>
                         </li>
                         {/if}
                     {/if}
@@ -61,5 +63,18 @@
 		box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 		padding: 1em;
 		margin: 0 0 1em 0;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+    }
+
+    .itemImage {
+        height: 100px;
+    }
+
+    .itemDetails {
+        width: 60%;
+        margin-left: 5px;
     }
 </style>
