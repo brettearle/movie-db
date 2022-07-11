@@ -1,4 +1,8 @@
 
+## Movie DB written in Svelte using OMDB
+
+This is a movie data base concentrating on functionality of search, filtering, and manipulating data to produce desired results
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:

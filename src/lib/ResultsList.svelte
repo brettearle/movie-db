@@ -15,7 +15,7 @@
             {#if $moviesSearch !== undefined}
                 {#each $moviesSearch as movie }
                     {#if movie.Type === $typeFilter || $typeFilter === 'any'}
-                    {#if Number(movie.Year) > ($yearFilter[0] + 1970) && Number(movie.Year) < ($yearFilter[1] +1970)}
+                    {#if Number(movie.Year) > ($yearFilter[0] + 1900) && Number(movie.Year) < ($yearFilter[1] +1900)}
                         <li id='{movie.imdbID}' 
                             class:red="{$currentSelectedLI === movie.imdbID}"
                             on:click="{() => {
@@ -51,18 +51,17 @@
     ul {
         margin-left: 0;
         padding-left: 0;
-        width: 40%;
+        padding-right: 5px;
+        width: 30%;
         overflow-y: scroll;
         max-height: 88vh;
     }
 
     li {
         list-style: none;
-        border: 1px solid #aaa;
-		border-radius: 5px;
-		box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        border-bottom: 1px solid #aaa;
 		padding: 1em;
-		margin: 0 0 1em 0;
+		margin: none;
         display: flex;
         justify-content: space-around;
         align-content: center;
@@ -76,5 +75,28 @@
     .itemDetails {
         width: 60%;
         margin-left: 5px;
+    }
+
+    .itemDetails p {
+        font-weight: 300;
+        font-size: .8em;
+        margin-top: 2px;
+    }
+
+    .itemDetails h2 {
+        margin-bottom: 2px;
+    }
+
+    ul::-webkit-scrollbar {
+        width: .5em;
+    }       
+ 
+    ul::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+ 
+    ul::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        
     }
 </style>

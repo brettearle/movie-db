@@ -52,7 +52,7 @@
         display: flex;
         flex-direction: column;;
         align-items: center;
-        width: 60%;
+        width: 70%;
         margin: 20px 20px;
     }
 

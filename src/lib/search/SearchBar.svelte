@@ -1,6 +1,7 @@
 <script>
     import {title, moviesSearch, API_URL, typeFilter, yearFilter} from "../../stores";
     import Slider from '@bulatdashiev/svelte-slider';
+    import SearchSvg from "../svg/SearchSVG.svelte";
     
     const fetchMovies = async (title) => {
         const res = await fetch(`${$API_URL}&s=${title}&plot=full`);
@@ -13,7 +14,7 @@
 <header>
     <section id="searchBar">
         <form id="form">
-            <button on:click|preventDefault={fetchMovies($title)}>Search</button>
+            <button on:click|preventDefault={fetchMovies($title)}> <SearchSvg /> </button>
             <input id="searchInput" type="input" bind:value={$title}> 
         </form>
     </section>
@@ -57,6 +58,7 @@
         height: 75px;
         background-color: gray;
         margin: 0;
+        color: #f5f5f5;
     }
 
     #searchBar {
@@ -67,6 +69,8 @@
 
     form {
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #form input, #form button {
@@ -76,17 +80,24 @@
 
     #form input {
         border: none;
-        width: 80%;
-        margin: 25px;
+        width: 85%;
+        height: 50%;
+        margin: 25px 25px 25px 0;
         text-indent: 5%;
         background-color: gray;
+        color: inherit;
+        border-radius: 5px;
+        font-family: Inter, Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
     }
 
     #form button {
-        width: 20%;
-        background: lightblue;
+        width: 15%;
+        margin-left: 20px;
+        margin-right: 0;
+        background: gray;
 	    color: inherit;
-	    border: solid 1px black;
+	    border: none;
         height: 100%;
 	    padding: 0;
 	    font: inherit;
@@ -111,6 +122,7 @@
 
     #searchInput:hover, #searchInput:focus{
         background-color: lightgray;
+        color: #050505;
     }
 
 
