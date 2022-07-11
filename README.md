@@ -26,6 +26,11 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
+## Questions I should have clarified early
+
+What are the font families?
+Is this a desktop aimed site or does it require full responsiveness?
+
 
 ## Thought Log
 
@@ -43,3 +48,5 @@ The year filter was a little more challenging. As a range input with 2 handles i
 Began laying out css. Went smoothly. Concentrated on using flexbox to get elements to correct positions. Did some basic styling to highlight components to positions correctly. 
 
 Fixed the search functionality, now it displays correctly regardless of whether the API returns all data. Was running into issues where site would break if all data was not present. This was rectified by conditionally rendering the ratings as each returned json objects does not have [0,1,2]
+
+Moved onto styling. Learnt how to target scroll bars inside of elements. Also began learning about svg.
