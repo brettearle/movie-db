@@ -4,7 +4,6 @@
     
     const addWatchList = (selectedMovie) => {
         watchList.update((wl) => [...wl, selectedMovie])
-        console.log($watchList)
     }
 
     const removeWatchList = (selectedMovie) => {
