@@ -77,4 +77,4 @@ let selectedMovie = writable({});
 let watchList = writable([{}]);
 let typeFilter = writable("any");
 let yearFilter = writable([0, 122]);
-const API_URL = writable("http://www.omdbapi.com?apikey=d9463cca");
+const API_URL = writable("https://www.omdbapi.com?apikey=d9463cca");

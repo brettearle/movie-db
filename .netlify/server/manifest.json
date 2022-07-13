@@ -32,7 +32,7 @@
     "isEntry": true,
     "imports": [
       "_index-a704d3f2.js",
-      "_stores-e432d2ac.js"
+      "_stores-676ed040.js"
     ],
     "css": [
       "immutable/assets/entries/pages/index.svelte-edea5688.css"
@@ -44,7 +44,7 @@
     "isEntry": true,
     "imports": [
       "_index-a704d3f2.js",
-      "_stores-e432d2ac.js"
+      "_stores-676ed040.js"
     ],
     "css": [
       "immutable/assets/entries/pages/watchlist.svelte-fab8c706.css"
@@ -53,8 +53,8 @@
   "_index-a704d3f2.js": {
     "file": "immutable/chunks/index-a704d3f2.js"
   },
-  "_stores-e432d2ac.js": {
-    "file": "immutable/chunks/stores-e432d2ac.js",
+  "_stores-676ed040.js": {
+    "file": "immutable/chunks/stores-676ed040.js",
     "imports": [
       "_index-a704d3f2.js"
     ]

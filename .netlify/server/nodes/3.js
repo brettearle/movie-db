@@ -29,6 +29,6 @@ __export(stdin_exports, {
 module.exports = __toCommonJS(stdin_exports);
 var module2 = __toESM(require("../entries/pages/watchlist.svelte.js"));
 const index = 3;
-const file = "immutable/pages/watchlist.svelte-940e8118.js";
-const imports = ["immutable/pages/watchlist.svelte-940e8118.js", "immutable/chunks/index-3a2fa571.js", "immutable/chunks/stores-8e14f248.js", "immutable/chunks/index-6d6efbf9.js"];
+const file = "immutable/pages/watchlist.svelte-ff07e4f9.js";
+const imports = ["immutable/pages/watchlist.svelte-ff07e4f9.js", "immutable/chunks/index-3a2fa571.js", "immutable/chunks/stores-d99824a9.js", "immutable/chunks/index-6d6efbf9.js"];
 const stylesheets = ["immutable/assets/pages/watchlist.svelte-7977dff5.css"];
