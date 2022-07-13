@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export let title = writable('Search title here');
+export let title = writable('');
 export let moviesSearch = writable([]);
 export let currentSelectedLI = writable("");
 export let selectedMovie = writable({});

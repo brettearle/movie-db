@@ -15,7 +15,7 @@
     <section id="searchBar">
         <form id="form">
             <button on:click|preventDefault={fetchMovies($title)}> <SearchSvg /> </button>
-            <input id="searchInput" type="input" bind:value={$title}> 
+            <input id="searchInput" type="input" bind:value={$title} placeholder="Search Title Here"> 
         </form>
     </section>
     <section id="filterBar">
@@ -119,6 +119,10 @@
 
     #searchInput {
         background-color: gray;
+    }
+
+    ::placeholder {
+        color: #f5f5f5;
     }
 
     #searchInput:hover, #searchInput:focus{
