@@ -3,6 +3,8 @@
 
 This is a movie data base concentrating on functionality of search, filtering, and manipulating data to produce desired results
 
+**[Demo](https://movie-db-test-be.netlify.app/)**
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
