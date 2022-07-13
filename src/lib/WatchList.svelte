@@ -17,9 +17,9 @@
         <span>waiting</span>
     {:then $watchList} 
         {#if $watchList.find(el => el.Title === $selectedMovie.Title) !== undefined}
-            <span class="watchlist remove" on:click={() => removeWatchList($selectedMovie)}>Remove from Watchlist</span>
+            <span class="watchlist remove" on:click={() => removeWatchList($selectedMovie)}>- Watchlist</span>
         {:else}
-            <span class="watchlist" on:click={() => addWatchList($selectedMovie)}>Add to Watchlist</span>
+            <span class="watchlist" on:click={() => addWatchList($selectedMovie)}>+ Watchlist</span>
         {/if}
     {/await}
    
