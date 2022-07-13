@@ -67,7 +67,7 @@
     }
 
     .itemImage {
-        height: 100px;
+        height: 150px;
     }
 
     .itemDetails {
