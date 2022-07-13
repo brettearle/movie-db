@@ -40,9 +40,7 @@
             <p style="color: red">{error.message}</p>
         {/await}        
     </ul>
-
-
-
+    
 <style>
     .red {
         background-color: rgba(204, 200, 200, 0.2);

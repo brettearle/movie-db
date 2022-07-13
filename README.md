@@ -29,6 +29,7 @@ You can preview the production build with `npm run preview`.
 ## Questions I should have clarified early
 
 What are the font families?
+
 Is this a desktop aimed site or does it require full responsiveness?
 
 

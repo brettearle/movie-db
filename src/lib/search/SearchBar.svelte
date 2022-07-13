@@ -27,7 +27,7 @@
             </div>
             <Slider min="0" max="150" step="1" bind:value={$yearFilter} range order />
         </section>
-        <fieldset on:click={console.log($typeFilter)}>
+        <fieldset>
             <legend>TYPE</legend>
             <label for="any"> 
                 <input type="radio" name="type" id="any" checked bind:group={$typeFilter} value='any'>
@@ -46,7 +46,8 @@
                 Episodes
             </label>
          </fieldset>    
-    </section>    
+    </section> 
+    <span><a href="/watchlist">Watch List</a></span>   
 </header>
 
 
@@ -54,6 +55,7 @@
     header {
         display: flex;
         justify-content: space-between ;
+        align-items: center;
         width: 100%;
         height: 75px;
         background-color: gray;
@@ -64,7 +66,6 @@
     #searchBar {
         display: flex;
         width: 40%;
-        
     }
 
     form {
@@ -137,5 +138,12 @@
         flex-direction: row;
         align-content: center;
         justify-content: space-between;
-    }	
+    }
+
+    a {
+        font-size: 1em;
+        text-decoration: none;
+        color: inherit;
+        font-family: Inter, Arial, Helvetica, sans-serif ;
+    }
 </style>

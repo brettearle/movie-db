@@ -1,5 +1,6 @@
 <script>
     import {selectedMovie} from "../stores"
+    import WatchList from '$lib/WatchList.svelte'
 </script>
 
 {#await $selectedMovie}
@@ -9,18 +10,17 @@
     <section class='container'>
         <section class="mainDetails">
             <img src={selectedMovie.Poster} alt={selectedMovie.Title}>
-            
             <div class="mainDetailsText">
                 <h2>{selectedMovie.Title}</h2>
                 <p>
-                    <span id="rated"> {selectedMovie.Rated} </span>
+                    <span id="rated">{selectedMovie.Rated}</span>
                     <span>{selectedMovie.Year}</span>
                     <span>{selectedMovie.Genre}</span>
                     <span>{selectedMovie.Runtime}</span>
                 </p>
                 <p>{selectedMovie.Actors}</p>
             </div>
-            <span class="watchlist">Watchlist</span>
+            <WatchList />
         </section>
         <section class="plot">
             <p>{selectedMovie.Plot}</p>
@@ -50,8 +50,9 @@
 <style>
     .container {
         display: flex;
-        flex-direction: column;;
+        flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         width: 70%;
         margin: 20px 20px;
     }
@@ -70,25 +71,16 @@
     .plot {
         border-top: 1px solid black;
         border-bottom: 1px solid black;
-        margin-top: 20px;
+        margin: 20px 0;
+        padding: 40px 0;
     }
 
     .ratings {
         display: flex;
         justify-content: space-around;
         width: 100%;
-        margin-top: 20px;
-    }
-
-    .watchlist {
-        justify-self: flex-end;
-        height: fit-content;
-        margin-left: auto;
-        margin-top: 20px;
-        margin-right: 20px;
-        border: solid 1px black;
-        border-radius: 4px;
-        padding: 1px 4px;
+        margin-bottom: 20px;
+        
     }
 
     .rating {
@@ -109,8 +101,8 @@
     }
 
     img {
-        height: 300px;
-        width: 200px;
+        height: 400px;
+        width: 300px;
         margin-right: 20px;
     }
 
@@ -118,4 +110,8 @@
         padding-left: 10px;
     }
 
+    span {
+        display: inline-block;
+        margin-right: 1em;
+    }
 </style>
