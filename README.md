@@ -51,3 +51,7 @@ Began laying out css. Went smoothly. Concentrated on using flexbox to get elemen
 Fixed the search functionality, now it displays correctly regardless of whether the API returns all data. Was running into issues where site would break if all data was not present. This was rectified by conditionally rendering the ratings as each returned json objects does not have [0,1,2]
 
 Moved onto styling. Learnt how to target scroll bars inside of elements. Also began learning about svg.
+
+Built out the watch list today. No persistence as I didn't think it was necessary to be saving things to local storage. It went rather smoothly. Had some hiccups with finding the correct array methods but after some perseverance worked through it.
+
+Deployed site to netlify for easy inspection. Learnt how to use different build configs which was a interesting rabbit hole.
