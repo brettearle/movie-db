@@ -65,6 +65,7 @@
         border: solid 1px gray;
         box-shadow: 2px 2px rgb(98, 98, 98);
         border-radius: 10px;
+        min-width: 500px;
         width: 31%;
         margin: 1%;
     }
